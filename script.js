@@ -1,37 +1,7 @@
-// const taskQueue = [];
-
-//         function enqueueTask() {
-//             const taskInput = document.getElementById("taskInput");
-//             const taskList = document.getElementById("taskList");
-//             const task = taskInput.value;
-
-//             if (task) {
-//                 taskQueue.push(task);
-//                 taskInput.value = "";
-//                 displayQueue();
-//             }
-//         }
-
-//         function dequeueTask() {
-//             if (taskQueue.length > 0) {
-//                 const dequeuedTask = taskQueue.shift();
-//                 displayQueue();
-//                 alert(`Dequeued Task: ${dequeuedTask}`);
-//             } else {
-//                 alert("Queue is empty.");
-//             }
-//         }
-
-//         function displayQueue() {
-//             const taskList = document.getElementById("taskList");
-//             taskList.innerHTML = "Tasks in Queue: " + taskQueue.join(" -> ");
-//         }
-
-
 const requestQueue = [];
 const issuedTickets = [];
-const maxQueueSize = 5; // Maximum number of customers in the queue
-let availableTickets = 10; // Initial number of available tickets
+const maxQueueSize = 5;
+let availableTickets = 10;
 
 function enqueueRequest() {
     const customerName = document.getElementById("customerName").value;
